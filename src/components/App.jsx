@@ -1,16 +1,16 @@
+import BookForm from './BookForm/BookForm';
+import ContactList from './Contacts/ContactList/ContactList';
+import Contacts from './Contacts/Contacts';
+import FilterForm from './Contacts/FilterForm/FilterForm';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div style={{ width: '400px', margin: '0 auto', padding: '40px 0' }}>
+      <BookForm title="Phonebook" />
+      <Contacts title="Contacts">
+        <FilterForm />
+        <ContactList />
+      </Contacts>
     </div>
   );
 };
