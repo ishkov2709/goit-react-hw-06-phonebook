@@ -14,7 +14,7 @@ const BookForm = ({ title }) => {
       tel: '',
     },
     onSubmit: values => {
-      if (!values.name ?? !values.tel) return;
+      if (!values.name || !values.tel) return;
 
       !contacts.find(
         ({ name }) => name.toLowerCase() === values.name.toLowerCase()
